@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "DCInside m → PC Redirector",
+  "version": "1.1.0",
+  "description": "일부 네트워크 환경에서 차단되는 m.dcinside.com 요청을 PC용 도메인(gall.dcinside.com, dcinside.com, gallog.dcinside.com)으로 자동 변환합니다.",
+  "icons": {
+    "16": "icon16.png",
+    "32": "icon32.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_title": "DCInside m → PC Redirector"
+  },
+  "permissions": [
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "*://m.dcinside.com/*",
+    "*://gall.dcinside.com/*",
+    "*://dcinside.com/*",
+    "*://gallog.dcinside.com/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules_1.json"
+      }
+    ]
+  }
+}

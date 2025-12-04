@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://gall.dcinside.com/board/view/?id=\\1&no=\\2"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://m\\.dcinside\\.com/board/([A-Za-z0-9_-]+)/([0-9]+)$",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 2,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://gall.dcinside.com/board/view/?id=\\1&no=\\2&\\3"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://m\\.dcinside\\.com/board/([A-Za-z0-9_-]+)/([0-9]+)\\?(.*)$",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 3,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://gall.dcinside.com/board/lists/?id=\\1"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://m\\.dcinside\\.com/board/([A-Za-z0-9_-]+)$",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 4,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://gall.dcinside.com/board/lists/?id=\\1&\\2"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://m\\.dcinside\\.com/board/([A-Za-z0-9_-]+)\\?(.*)$",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 5,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://gallog.dcinside.com/\\1"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://m\\.dcinside\\.com/(?:index\\.php/)?gallog/(.+)$",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  },
+  {
+    "id": 6,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://dcinside.com/search\\1"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://m\\.dcinside\\.com/search(.*)$",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  }
+]
